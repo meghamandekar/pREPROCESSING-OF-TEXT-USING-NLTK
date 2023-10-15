@@ -19,7 +19,7 @@ print(porter.stem("Mobile"))
 LEMMATIZATION-
 Lemmatization involves grouping together the inflected forms of the same word. This way, we can reach out to the base form of any word which will be meaningful in nature. The base from here is called the Lemma. Lemmatizers are slower and computationally more expensive than stemmers.
 from nltk.stem import WordNetLemmatizer
-# create an object of class WordNetLemmatizer
+
 lemmatizer = WordNetLemmatizer()
 print(lemmatizer.lemmatize("plays", 'v'))
 print(lemmatizer.lemmatize("played", 'v'))
@@ -35,7 +35,7 @@ example_sent = """This is a sample sentence,
 showing off the stop words filtration."""
 stop_words = set(stopwords.words('english'))
 word_tokens = word_tokenize(example_sent)
-# converts the words in word_tokens to lower case and then checks whether
+
 #they are present in stop_words or not
 filtered_sentence = [w for w in word_tokens if not w.lower() in stop_words]
 #with no lower case conversion
